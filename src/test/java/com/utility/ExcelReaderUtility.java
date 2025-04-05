@@ -19,8 +19,7 @@ public class ExcelReaderUtility {
 
 	@DataProvider(name="LoginTestExcelDataProvider")
 	public static Iterator<User> readExcelFile(String fileName) {
-
-		File file = new File(System.getProperty("user.dir") + "\\testData\\"+fileName+".xlsx");
+		File file = new File(System.getProperty("user.dir") + "//testData//"+fileName+".xlsx");
 		XSSFSheet xssfsheet = null;
 		List<User> userList;
 		Cell emailAddressCell;

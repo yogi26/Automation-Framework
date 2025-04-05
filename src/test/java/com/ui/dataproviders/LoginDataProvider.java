@@ -42,6 +42,6 @@ public class LoginDataProvider {
 	}
 	@DataProvider(name="LoginTestExcelDataProvider")
 	public Iterator<User> loginExcelDataProvider() {
-		return ExcelReaderUtility.readExcelFile("loginData");
+		return ExcelReaderUtility.readExcelFile("LoginData");
 	}
 }
