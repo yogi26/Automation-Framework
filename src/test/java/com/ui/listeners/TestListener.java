@@ -9,6 +9,7 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.ui.tests.TestBase;
@@ -51,8 +52,18 @@ public class TestListener implements ITestListener {
 		
 		Object testClass = result.getInstance();
 		BrowserUtility browserUtility=((TestBase)testClass).getInstance();
-		String path = browserUtility.takeScreenshot(result.getMethod().getMethodName());
-		ExtentReporterUtility.getTest().addScreenCaptureFromPath(path);
+		
+		/*String path = browserUtility.takeScreenshot(result.getMethod().getMethodName());
+		ExtentReporterUtility.getTest().addScreenCaptureFromPath(path);*/
+		
+		//this will take screenshot as base64 
+	    String base64Image = browserUtility.takeScreenshotBase64(result.getMethod().getMethodName());
+	    
+	    // Add the base64 screenshot to the report
+	    if (base64Image != null) {
+	    	ExtentReporterUtility.getTest().log(Status.FAIL, "Screenshot of failure: ", 
+	            MediaEntityBuilder.createScreenCaptureFromBase64String(base64Image).build());
+	    }
 	}
 
 	public void onTestSkipped(ITestResult result) {

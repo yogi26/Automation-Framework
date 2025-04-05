@@ -108,7 +108,7 @@ public abstract class BrowserUtility {
 		Date date=new Date();
 		SimpleDateFormat format=new SimpleDateFormat("HH-mm-ss");
 		String timestamp = format.format(date);
-		String path=System.getProperty("user.dir")+"//screenshots//"+name+"-"+timestamp+".png";
+		String path="./screenshots/"+name+" - "+timestamp+".png";
 		File screenshotFile=new File(path);
 		File screenshotData=screenshot.getScreenshotAs(OutputType.FILE);
 		try {
@@ -118,4 +118,16 @@ public abstract class BrowserUtility {
 		}
 		return path;
 	}
+	public String takeScreenshotBase64(String name) {
+	    try 
+	    {
+	        TakesScreenshot screenshot = (TakesScreenshot)driverManager.get();
+	        String base64Image = screenshot.getScreenshotAs(OutputType.BASE64);
+	        return base64Image;
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	        return null;
+	    }
+	}
+
 }
