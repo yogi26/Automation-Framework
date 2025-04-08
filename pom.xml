@@ -7,11 +7,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<description>test automation framework for automation practice pl</description>
 	<properties>
-		<browser>chrome</browser>
-		<isHeadless>true</isHeadless>
-		<isLambdaTest>false</isLambdaTest>
 		<maven.compiler.source>11</maven.compiler.source>
-    	<maven.compiler.target>11</maven.compiler.target>
+		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -59,6 +56,11 @@
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>5.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.javafaker</groupId>
+			<artifactId>javafaker</artifactId>
+			<version>1.0.2</version>
 		</dependency>
 	</dependencies>
 	<build>
