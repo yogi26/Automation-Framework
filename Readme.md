@@ -1,3 +1,32 @@
+# Test Automation Framework
+
+## Overview
+
+This Java-based test automation framework is designed using **Page Object Model (POM)** and caters to data-driven testing needs. It integrates several libraries for functionalities and supports running tests locally or on the cloud via LambdaTest. Below, you'll find detailed instructions on setting up, running, and understanding the framework.
+
+This is a comprehensive Java-based test automation framework built with the following features:
+
+**Design Pattern**: Page Object Model
+
+**Java Version**: Java 11
+
+**Testing Framework**: TestNG
+
+**Data-Driven Testing**: OpenCSV, Apache POI, Gson
+
+**Test Data Generation**: Java Faker
+
+**Execution Options**: Local (headed/headless) and Cloud (LambdaTest)
+
+**Reporting**: Extent Reports
+
+**Logging**: Log4j
+
+**Build Tool**: Maven
+
+---
+
+
 
 ## 🚀 About Me
 I'm a Test Automation Engineer with a strong foundation in Java, Selenium, Playwright, and API testing tools like RestAssured. I believe in writing clean, scalable, and maintainable automation code that not only tests software but adds real value to the development lifecycle.
@@ -37,11 +66,17 @@ Ensure you have the following installed:
 ## Setting Up the Framework
 
 1. Clone or download the repository to your local system:
-      git clone <repository-https://github.com/yogi26/Automation-Framework>
-      
+      ``` bash 
+      git clone https://github.com/yogi26/Automation-Framework
+      ```
+
+      ``` bash 
       cd test-automation-framework
+      ```
 2. Install dependencies:
+      ``` bash 
       mvn clean install
+      ```
 
 # Running Tests
 ### Command Line Execution
@@ -61,7 +96,9 @@ mvn test -Dbrowser=chrome -DisHeadless=true -DisLambdaTest=true
 3. **isLambdaTest**: Set to true if you want to run tests on LambdaTest; otherwise set to false.
 
 ### Example Command
+``` bash 
 mvn test -Dbrowser=chrome -DisHeadless=true -DisLambdaTest=true
+```
 
 # Reports and Logs
 1. **Extent Report**: The execution report will be generated as report.html in the project root folder.
@@ -69,32 +106,4 @@ mvn test -Dbrowser=chrome -DisHeadless=true -DisLambdaTest=true
 
 ## Integrated the project with Github Actions
 This automation framework is integrated with github actions.
- # Test Automation Framework
-
-## Overview
-
-This Java-based test automation framework is designed using **Page Object Model (POM)** and caters to data-driven testing needs. It integrates several libraries for functionalities and supports running tests locally or on the cloud via LambdaTest. Below, you'll find detailed instructions on setting up, running, and understanding the framework.
-
-This is a comprehensive Java-based test automation framework built with the following features:
-
-**Design Pattern**: Page Object Model
-
-**Java Version**: Java 11
-
-**Testing Framework**: TestNG
-
-**Data-Driven Testing**: OpenCSV, Apache POI, Gson
-
-**Test Data Generation**: Java Faker
-
-**Execution Options**: Local (headed/headless) and Cloud (LambdaTest)
-
-**Reporting**: Extent Reports
-
-**Logging**: Log4j
-
-**Build Tool**: Maven
-
----
-
-
+ 
