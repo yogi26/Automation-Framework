@@ -1,7 +1,5 @@
 package com.ui.tests;
 
-import static com.constants.Browser.CHROME;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -23,7 +21,7 @@ public class TestBase {
 	@Parameters({"browser","isHeadless","isLambdaTest"})
 	@BeforeMethod(description = "Load the Homepage of the site")
 	public void setUp(@Optional("chrome") String browser, 
-					  @Optional("true") boolean isHeadless, 
+					  @Optional("false") boolean isHeadless, 
 					  @Optional("false") boolean isLambdaTest, 
 					  ITestResult result) {
 		this.isLambdaTest=isLambdaTest;

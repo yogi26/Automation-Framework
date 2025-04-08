@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Automation project Suite">
-  <test thread-count="5" name="Test" parallel="methods">
-  <parameter name="browser" value="${browser}"></parameter>
-  <parameter name="isHeadless" value="${isHeadless}"></parameter>
-  <parameter name="isLambdaTest" value="${isLambdaTest}"></parameter>
-    <classes>
-      <class name="com.ui.tests.LoginTest"/>
-    </classes>
-  </test> 
+	<test thread-count="5" name="Test" parallel="methods">
+		<parameter name="browser" value="${browser}"></parameter>
+		<parameter name="isHeadless" value="${isHeadless}"></parameter>
+		<parameter name="isLambdaTest" value="${isLambdaTest}"></parameter>
+		<classes>
+			<class name="com.ui.tests.LoginTest" />
+			<class name="com.ui.tests.AddNewAddressTest" />
+			<class name="com.ui.tests.InvalidCredLoginTest" />
+			<class name="com.ui.tests.ProductSearchTest" />
+			<class name="com.ui.tests.ProductCheckoutTest" />
+		</classes>
+	</test>
 </suite>
